@@ -4,13 +4,13 @@
 
 <!-- CAJA PRINCIPAL -->
 <div id="principal">
-	<h1>Crear categorías</h1>
-	<p>Añade nuevas categorias al blog para que los usuarios puedan usarlas al crear sus entradas.</p>
+	<h1>Create category</h1>
+	<p>Add new categories to the blog so users can use them when creating their posts.</p>
 	<br/>
 	<form action="guardar-categoria.php" method="POST">
-		<label for="nombre">Nombre de la categoría:</label>
+		<label for="nombre">Category name:</label>
 		<input type="text" name="nombre" />
-		<input type="submit" value="Guardar" />
+		<input type="submit" value="Save" />
 	</form>
 </div>
 			

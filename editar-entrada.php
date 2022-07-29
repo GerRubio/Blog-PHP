@@ -15,21 +15,21 @@
 
 <!-- CAJA PRINCIPAL -->
 <div id="principal">
-	<h1>Editar entrada</h1>
-	<p>Editar entrada: <?=$entrada_actual['titulo']?></p>
+	<h1>Edit post</h1>
+	<p>Edit post: <?=$entrada_actual['titulo']?></p>
 	<br/>
 	<form action="guardar-entrada.php?editar=<?=$entrada_actual['id']?>" method="POST">
-		<label for="titulo">Titulo:</label>
+		<label for="titulo">Title:</label>
 		<input type="text" name="titulo" value="<?=$entrada_actual['titulo']?>"/>
-
+	
 		<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'titulo') : ''; ?>
 		
-		<label for="descripcion">Descripción:</label>
+		<label for="descripcion">Description:</label>
 		<textarea name="descripcion"><?=$entrada_actual['descripcion']?></textarea>
 		
 		<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'descripcion') : ''; ?>
-	
-		<label for="categoria">Categoría</label>
+		
+		<label for="categoria">Category:</label>
 		<select name="categoria">
 			<?php 
 				$categorias = conseguirCategorias($db); 
@@ -48,7 +48,7 @@
 		
 		<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'categoria') : ''; ?>
 		
-		<input type="submit" value="Guardar" />
+		<input type="submit" value="Save" />
 	</form>
 
 	<?php borrarErrores(); ?>

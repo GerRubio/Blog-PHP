@@ -2,10 +2,10 @@
 <?php require_once 'includes/helpers.php'; ?>
 
 <!DOCTYPE HTML>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Mi Blog</title>
+		<title>My Blog</title>
 		<link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
 	</head>
 	<body>
@@ -15,14 +15,14 @@
 			
 			<!-- LOGO -->
 			<div id="logo">
-				<a href="index.php">Mi Blog</a>
+				<a href="index.php">My Blog</a>
 			</div>
 			
 			<!-- MENÚ -->
 			<nav id="menu">
 				<ul>
 					<li>
-						<a href="index.php">Inicio</a>
+						<a href="index.php">Front Page</a>
 					</li>
 
 					<?php 

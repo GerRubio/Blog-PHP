@@ -3,7 +3,7 @@
 		
 <!-- CAJA PRINCIPAL -->
 <div id="principal">
-	<h1>Últimas entradas</h1>
+	<h1>Last posts</h1>
 	
 	<?php 
 		$entradas = conseguirEntradas($db, true);
@@ -26,7 +26,7 @@
 	?>
 
 	<div id="ver-todas">
-		<a href="entradas.php">Ver todas las entradas</a>
+		<a href="entradas.php">See all posts</a>
 	</div>
 </div>
 			

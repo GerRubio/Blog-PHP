@@ -13,15 +13,15 @@ if(isset($_POST)){
 	$errores = array();
 	
 	if(empty($titulo)){
-		$errores['titulo'] = 'El titulo no es válido.';
+		$errores['titulo'] = 'The title is not valid.';
 	}
 	
 	if(empty($descripcion)){
-		$errores['descripcion'] = 'La descripción no es válida.';
+		$errores['descripcion'] = 'The description is not valid.';
 	}
 	
 	if(empty($categoria) && !is_numeric($categoria)){
-		$errores['categoria'] = 'La categoría no es válida.';
+		$errores['categoria'] = 'The category is not valid.';
 	}
 	
 	if(count($errores) == 0){

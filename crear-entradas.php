@@ -4,21 +4,21 @@
 
 <!-- CAJA PRINCIPAL -->
 <div id="principal">
-	<h1>Crear entradas</h1>
-	<p>Añade nuevas entradas al blog para que los usuarios puedan leerlas y disfrutar de nuestro contenido.</p>
+	<h1>Create post</h1>
+	<p>Add new posts to the blog so that users can read them and enjoy our content.</p>
 	<br/>
 	<form action="guardar-entrada.php" method="POST">
-		<label for="titulo">Titulo:</label>
+		<label for="titulo">Title:</label>
 		<input type="text" name="titulo" />
 
 		<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'titulo') : ''; ?>
 		
-		<label for="descripcion">Descripción:</label>
+		<label for="descripcion">Description:</label>
 		<textarea name="descripcion"></textarea>
 
 		<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'descripcion') : ''; ?>
 		
-		<label for="categoria">Categoría</label>
+		<label for="categoria">Category</label>
 		<select name="categoria">
 			<?php 
 				$categorias = conseguirCategorias($db);
@@ -37,7 +37,7 @@
 		
 		<?php echo isset($_SESSION['errores_entrada']) ? mostrarError($_SESSION['errores_entrada'], 'categoria') : ''; ?>
 		
-		<input type="submit" value="Guardar" />
+		<input type="submit" value="Save" />
 	</form>
 
 	<?php borrarErrores(); ?>

@@ -20,7 +20,7 @@ if(isset($_POST)){
 		$nombre_validado = true;
 	} else {
 		$nombre_validado = false;
-		$errores['nombre'] = "El nombre no es válido.";
+		$errores['nombre'] = "The name is invalid.";
 	}
 	
 	// Validar apellidos.
@@ -28,7 +28,7 @@ if(isset($_POST)){
 		$apellidos_validado = true;
 	} else {
 		$apellidos_validado = false;
-		$errores['apellidos'] = "Los apellidos no son válido.";
+		$errores['apellidos'] = "The surname is invalid.";
 	}
 	
 	// Validar el correo electrónico.
@@ -36,7 +36,7 @@ if(isset($_POST)){
 		$email_validado = true;
 	} else {
 		$email_validado = false;
-		$errores['email'] = "El correo electrónico no es válido.";
+		$errores['email'] = "The E-mail is invalid.";
 	}
 	
 	$guardar_usuario = false;
@@ -67,12 +67,12 @@ if(isset($_POST)){
 				$_SESSION['usuario']['apellidos'] = $apellidos;
 				$_SESSION['usuario']['email'] = $email;
 
-				$_SESSION['completado'] = "Tus datos se han actualizado con éxito.";
+				$_SESSION['completado'] = "Your data has been successfully updated.";
 			} else {
-				$_SESSION['errores']['general'] = "Fallo al guardar y actulizar tus datos.";
+				$_SESSION['errores']['general'] = "Failed to save and update your data.";
 			}
 		} else {
-			$_SESSION['errores']['general'] = "El usuario ya existe.";
+			$_SESSION['errores']['general'] = "User already exists.";
 		}
 		
 	} else {

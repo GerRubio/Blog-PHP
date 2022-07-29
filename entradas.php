@@ -3,7 +3,7 @@
 		
 <!-- CAJA PRINCIPAL -->
 <div id="principal">
-	<h1>Todas las entradas</h1>
+	<h1>All posts</h1>
 	
 	<?php 
 		$entradas = conseguirEntradas($db);

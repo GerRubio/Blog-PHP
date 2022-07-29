@@ -25,7 +25,7 @@ if(isset($_POST)){
 		$nombre_validado = true;
 	} else {
 		$nombre_validado = false;
-		$errores['nombre'] = "El nombre no es válido.";
+		$errores['nombre'] = "The name is invalid.";
 	}
 	
 	// Validar apellidos.
@@ -33,7 +33,7 @@ if(isset($_POST)){
 		$apellidos_validado = true;
 	} else {
 		$apellidos_validado = false;
-		$errores['apellidos'] = "Los apellidos no son válido.";
+		$errores['apellidos'] = "The surname is invalid.";
 	}
 	
 	// Validar el correo electrónico.
@@ -41,7 +41,7 @@ if(isset($_POST)){
 		$email_validado = true;
 	} else {
 		$email_validado = false;
-		$errores['email'] = "El corre electrónico no es válido.";
+		$errores['email'] = "The E-mail is invalid.";
 	}
 	
 	// Validar la contraseña.
@@ -49,7 +49,7 @@ if(isset($_POST)){
 		$password_validado = true;
 	} else {
 		$password_validado = false;
-		$errores['password'] = "La contraseña está vacía.";
+		$errores['password'] = "The password is invalid.";
 	}
 	
 	$guardar_usuario = false;
@@ -66,9 +66,9 @@ if(isset($_POST)){
 		$guardar = mysqli_query($db, $sql);
 			
 		if($guardar){
-			$_SESSION['completado'] = "El registro se ha completado con éxito.";
+			$_SESSION['completado'] = "Registration has been completed successfully.";
 		} else {
-			$_SESSION['errores']['general'] = "Fallo al guardar el usuario.";
+			$_SESSION['errores']['general'] = "Failed to save user.";
 		}	
 	} else {
 		$_SESSION['errores'] = $errores;

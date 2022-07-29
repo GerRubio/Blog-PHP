@@ -9,7 +9,7 @@
 		
 <!-- CAJA PRINCIPAL -->
 <div id="principal">
-	<h1>Búsqueda <?=$_POST['busqueda']?></h1>
+	<h1>Search <?=$_POST['busqueda']?></h1>
 	
 	<?php 
 		$entradas = conseguirEntradas($db, null, null, $_POST['busqueda']);
@@ -28,7 +28,7 @@
 			endwhile;
 		else:
 	?>
-		<div class="alerta">No hay entradas en esta categoría.</div>
+		<div class="alerta">No posts in this category.</div>
 	<?php endif; ?>
 </div>
 			

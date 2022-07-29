@@ -4,8 +4,9 @@
 
 <!-- CAJA PRINCIPAL -->
 <div id="principal">
-	<h1>Mis datos</h1>
-	
+	<h1>My data</h1>
+	<br/>
+
 	<?php if(isset($_SESSION['completado'])): ?>
 		<div class="alerta alerta-exito">
 			<?=$_SESSION['completado']?>
@@ -17,22 +18,22 @@
 	<?php endif; ?>
 		
 	<form action="actualizar-usuario.php" method="POST"> 
-		<label for="nombre">Nombre</label>
+		<label for="nombre">Name</label>
 		<input type="text" name="nombre" value="<?=$_SESSION['usuario']['nombre']; ?>"/>
 
 		<?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'nombre') : ''; ?>
 
-		<label for="apellidos">Apellidos</label>
+		<label for="apellidos">Surname</label>
 		<input type="text" name="apellidos" value="<?=$_SESSION['usuario']['apellidos']; ?>"/>
 
 		<?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'apellidos') : ''; ?>
 
-		<label for="email">Email</label>
+		<label for="email">E-mail</label>
 		<input type="email" name="email" value="<?=$_SESSION['usuario']['email']; ?>"/>
 		
 		<?php echo isset($_SESSION['errores']) ? mostrarError($_SESSION['errores'], 'email') : ''; ?>
 
-		<input type="submit" name="submit" value="Actualizar" />
+		<input type="submit" name="submit" value="Update" />
 	</form>
 	
 	<?php borrarErrores(); ?>

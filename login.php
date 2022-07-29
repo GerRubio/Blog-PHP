@@ -33,12 +33,12 @@ if(isset($_POST)){
 		} else {
 
 			// Si algo falla enviar una sesión con el fallo.
-			$_SESSION['error_login'] = "Login incorrecto.";
+			$_SESSION['error_login'] = "Incorrect Log In.";
 		}
 	} else {
 
 		// Mensaje de error.
-		$_SESSION['error_login'] = "Login incorrecto.";
+		$_SESSION['error_login'] = "Incorrect Log In.";
 	}
 	
 }

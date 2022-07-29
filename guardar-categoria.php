@@ -16,6 +16,7 @@ if(isset($_POST)){
 		$nombre_validado = true;
 	} else {
 		$nombre_validado = false;
+		
 		$errores['nombre'] = "El nombre no es válido.";
 	}
 	
